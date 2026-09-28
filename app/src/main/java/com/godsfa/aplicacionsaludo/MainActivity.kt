@@ -17,26 +17,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val etNombre = findViewById<EditText>(R.id.Nombre)
-        val btnSaludar = findViewById<Button>(R.id.buttonSaludar)
-        val btnLimpiar = findViewById<Button>(R.id.butttonLimpiar)
-        val tvSaludo = findViewById<TextView>(R.id.Mensaje)
+        val Nombre = findViewById<EditText>(R.id.Nombre)
+        val buttonSaludar = findViewById<Button>(R.id.buttonSaludar)
+        val butttonLimpiar = findViewById<Button>(R.id.butttonLimpiar)
+        val Mensaje = findViewById<TextView>(R.id.Mensaje)
 
         // Acción del botón Saludar
-        btnSaludar.setOnClickListener {
-            val nombre = etNombre.text.toString().trim()
+        buttonSaludar.setOnClickListener {
+            val nombre = Nombre.text.toString().trim()
             if (nombre.isNotEmpty()) {
-                tvSaludo.text = "Hola, $nombre"
+                Mensaje.text = "Hola, $nombre"
             } else {
                 Toast.makeText(this, "Por favor, escribe un nombre", Toast.LENGTH_SHORT).show()
             }
         }
 
         // Acción del botón Limpiar
-        btnLimpiar.setOnClickListener {
-            etNombre.text.clear()
-            tvSaludo.text = ""
-            etNombre.requestFocus()
+        buttonSaludar.setOnClickListener {
+            Nombre.text.clear()
+            Mensaje.text = ""
+            Nombre.requestFocus()
         }
 
 
