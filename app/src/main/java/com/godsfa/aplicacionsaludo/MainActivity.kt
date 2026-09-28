@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val Nombre = findViewById<EditText>(R.id.Nombre)
         val buttonSaludar = findViewById<Button>(R.id.buttonSaludar)
-        val butttonLimpiar = findViewById<Button>(R.id.butttonLimpiar)
+        val buttonLimpiar = findViewById<Button>(R.id.butttonLimpiar)
         val Mensaje = findViewById<TextView>(R.id.Mensaje)
 
         // Acción del botón Saludar
