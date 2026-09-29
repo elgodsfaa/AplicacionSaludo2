@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
-
 
         <TextView
             android:id="@+id/tvTitle"
@@ -32,19 +32,19 @@
             android:ems="10"
             android:hint="Escribe tu nombre"
             android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@id/buttonSaludar"
+            app:layout_constraintBottom_toTopOf="@id/btnSaludar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
         <Button
-            android:id="@+id/buttonSaludar"
+            android:id="@+id/btnSaludar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="SALUDAR"
             android:textColor="@color/white"
-            app:backgroundTint="#6750A4"
+            app:backgroundTint="#F20A0A"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@id/Mensaje"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,19 +59,19 @@
             android:text=""
             android:textColor="#49454F"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/butttonLimpiar"
+            app:layout_constraintBottom_toTopOf="@id/btnLimpiar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonSaludar" />
+            app:layout_constraintTop_toBottomOf="@id/btnSaludar" />
 
         <Button
-            android:id="@+id/butttonLimpiar"
+            android:id="@+id/btnLimpiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Limpiar"
+            android:text="LIMPIAR"
             android:textColor="@color/white"
-            app:backgroundTint="#6750A4"
+            app:backgroundTint="#010C1B"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,4 +80,3 @@
             app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

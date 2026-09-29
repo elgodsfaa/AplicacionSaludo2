@@ -15,40 +15,37 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
-
-        val Nombre = findViewById<EditText>(R.id.Nombre)
-        val buttonSaludar = findViewById<Button>(R.id.buttonSaludar)
-        val buttonLimpiar = findViewById<Button>(R.id.butttonLimpiar)
-        val Mensaje = findViewById<TextView>(R.id.Mensaje)
-
-        // Acción del botón Saludar
-        buttonSaludar.setOnClickListener {
-            val nombre = Nombre.text.toString().trim()
-            if (nombre.isNotEmpty()) {
-                Mensaje.text = "Hola, $nombre"
-            } else {
-                Toast.makeText(this, "Por favor, escribe un nombre", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        // Acción del botón Limpiar
-        buttonSaludar.setOnClickListener {
-            Nombre.text.clear()
-            Mensaje.text = ""
-            Nombre.requestFocus()
-        }
-
-
-
-
-
-
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val Nombre : EditText = findViewById(R.id.Nombre)
+        val btnSaludar: Button = findViewById(R.id.btnSaludar)
+        val Mensaje: TextView = findViewById(R.id.Mensaje)
+        val btnLimpiar: Button = findViewById(R.id.btnLimpiar)
+
+
+        btnSaludar.setOnClickListener {
+            val name = Nombre.text.toString()
+            if (name.isEmpty()) {
+                Toast.makeText(this, "Escribe tu nombre", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                Mensaje.text = "Hola, $name"
+            }
+
+        }
+        btnLimpiar.setOnClickListener {
+            Nombre.text.clear()
+            Mensaje.text = ""
+        }
     }
 }
+
+
+
+
+
+
